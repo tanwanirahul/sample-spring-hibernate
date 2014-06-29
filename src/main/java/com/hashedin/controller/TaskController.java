@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.hashedin.model.Task;
 
 @Controller
-public class AddTaskController {
+public class TaskController {
 
     @RequestMapping(method=RequestMethod.GET, value = "/tasks")
-    public String getViewToAddTask(@ModelAttribute("tasks") Task task) {
+    public String getView(@ModelAttribute("tasks") Task task) {
         return "addTask";
     }
     
     @RequestMapping(method=RequestMethod.POST, value = "/tasks")
-    public String addTask(Model model, @ModelAttribute("tasks") Task task) {
+    public String add(Model model, @ModelAttribute("tasks") Task task) {
         model.addAttribute("title", task.getTitle());
         return "taskAdded";
     }
