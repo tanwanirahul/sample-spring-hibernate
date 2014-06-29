@@ -7,6 +7,6 @@
 <title>Task Added!</title>
 </head>
 <body>
-<p>Whoa! you have added a new task: <b>${title}.</b></p>
+<p>Whoa! you have added a new task: <b>${title}.</b> The Id of this task is: <b>${id}.</b></p>
 </body>
 </html>
